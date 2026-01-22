@@ -1,16 +1,17 @@
 package tests;
 
+import static io.restassured.RestAssured.given;
+
+import org.apache.http.HttpStatus;
+import org.testng.annotations.Test;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
-import models.User;
-import org.apache.http.HttpStatus;
-import org.testng.annotations.Test;
-import utils.RandomUtils;
 import io.restassured.mapper.ObjectMapperType;
-
-import static io.restassured.RestAssured.given;
+import models.User;
+import utils.RandomUtils;
 
 public class CreateUserTest {
     private static final String API_URL = "https://petstore.swagger.io";
@@ -40,6 +41,6 @@ public class CreateUserTest {
                 .post(CREATE_USER_ENDPOINT)
                 .then()
                 .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                ..statusCode(HttpStatus.SC_BAD_REQUEST)
     }
 }
