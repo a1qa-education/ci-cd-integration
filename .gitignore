@@ -28,7 +28,7 @@ target/
 *.isl
 
  #Allure
- .allure
+.allure
  allure-results/
  allure-report/
 
