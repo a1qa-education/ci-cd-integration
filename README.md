@@ -1,1 +1,1 @@
-Tsaguria # automation-training
+ Git practice Repo
