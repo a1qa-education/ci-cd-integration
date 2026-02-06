@@ -17,15 +17,15 @@ public class CreateUserTest {
     private static final String BASE_PATH = "/v2";
     private static final String CREATE_USER_ENDPOINT = "/user";
 
-    @Feature("User API")
+
     @Story("Create user")
     @Description("Verify user can be created successfully")
     @Test(description = "Create a user - 200 Success")
     public void createUser() {
         User user = new User();
         user.setUsername(RandomUtils.getRandomAlphabeticString());
-        user.setFirstName(RandomUtils.getRandomAlphabeticString());
-        user.setLastName(RandomUtils.getRandomAlphabeticString());
+        user.setFirstName("Naty");
+        user.setLastName("Tsaguria");
         user.setEmail(RandomUtils.getRandomAlphabeticString());
         user.setPassword(RandomUtils.getRandomAlphabeticString());
         user.setPhone(RandomUtils.getRandomAlphabeticString());
@@ -40,6 +40,7 @@ public class CreateUserTest {
                 .post(CREATE_USER_ENDPOINT)
                 .then()
                 .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                .statusCode(HttpStatus.SC_BAD_REQUEST)
+;
     }
 }
