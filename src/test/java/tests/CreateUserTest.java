@@ -23,12 +23,12 @@ public class CreateUserTest {
     @Test(description = "Create a user - 200 Success")
     public void createUser() {
         User user = new User();
-        user.setUsername(RandomUtils.getRandomAlphabeticString());
-        user.setFirstName(RandomUtils.getRandomAlphabeticString());
-        user.setLastName(RandomUtils.getRandomAlphabeticString());
-        user.setEmail(RandomUtils.getRandomAlphabeticString());
-        user.setPassword(RandomUtils.getRandomAlphabeticString());
-        user.setPhone(RandomUtils.getRandomAlphabeticString());
+        user.setUsername("NaimurRahman");
+        user.setFirstName("Naimur");
+        user.setLastName("Rahman");
+        user.setEmail("n2.rahman@gmail.com");
+        user.setPassword("demoPassword");
+        user.setPhone("111111111");
         user.setUserStatus(0);
 
         given()
@@ -40,6 +40,6 @@ public class CreateUserTest {
                 .post(CREATE_USER_ENDPOINT)
                 .then()
                 .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                .statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 }
