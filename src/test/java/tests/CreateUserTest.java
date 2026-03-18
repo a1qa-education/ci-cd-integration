@@ -24,8 +24,8 @@ public class CreateUserTest {
     public void createUser() {
         User user = new User();
         user.setUsername(RandomUtils.getRandomAlphabeticString());
-        user.setFirstName(RandomUtils.getRandomAlphabeticString());
-        user.setLastName(RandomUtils.getRandomAlphabeticString());
+        user.setFirstName("YOURNAME");
+        user.setLastName("YOURLASTNAME");
         user.setEmail(RandomUtils.getRandomAlphabeticString());
         user.setPassword(RandomUtils.getRandomAlphabeticString());
         user.setPhone(RandomUtils.getRandomAlphabeticString());
@@ -43,3 +43,6 @@ public class CreateUserTest {
                 .statusCode(HttpStatus.SC_OK);
     }
 }
+
+//This is a test command
+//another test xoxo
