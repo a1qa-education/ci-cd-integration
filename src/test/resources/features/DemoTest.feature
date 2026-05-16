@@ -25,8 +25,8 @@ Feature: Demo test
     Examples:
       | login        | password             | status        |
       | tomsmith     | SuperSecretPassword! | successful    |
-      | tomsmith     | wrongpass            | unsuccessful  |
-      | unknown      | anypass              | successful    |
+      | tomsmith     | wrongpassword        | unsuccessful  |
+      | unknown      | anypassword          | successful    |
 
   @ui
   @allure.label.epic:Login
