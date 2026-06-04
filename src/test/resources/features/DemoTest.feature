@@ -8,14 +8,14 @@ Feature: Demo test
   @allure.label.feature:Remove
   @allure.label.story:Valid_remove_button
   Scenario: Remove button
-    When user clicks link 'Add/Remove Elements111111111111111111'
+    When user clicks link 'Add/Remove Elements'
       And user click Add button
     Then remove button is displayed
 
   @ui
   @allure.label.epic:Login
   @allure.label.feature:Authentication
-  @allure.label.story:Valid_user_login
+  @allure.label.story:Valid_user_login11111
   Scenario Outline: Login page
     When user clicks link 'Form Authentication'
       And user inputs login "<login>"
