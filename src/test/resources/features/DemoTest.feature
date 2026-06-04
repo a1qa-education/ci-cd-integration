@@ -1,4 +1,4 @@
-Feature: Demo test
+Feature: Test integration edit
 
   Background:
   Given main page is open
@@ -23,10 +23,10 @@ Feature: Demo test
       And user click Login button
     Then message about <status> login is displayed
     Examples:
-      | login        | password             | status        |
-      | tomsmith     | SuperSecretPassword! | successful    |
-      | tomsmith     | wrongpass            | unsuccessful  |
-      | unknown      | anypass              | successful    |
+          | login     | password             | status       |
+          | tomsmith  | SuperSecretPassword! | successful   |
+          | tomsmith  | wrongpass            | unsuccessful |
+          | t_pellegrino | password_falso123 | unsuccessful |
 
   @ui
   @allure.label.epic:Login
