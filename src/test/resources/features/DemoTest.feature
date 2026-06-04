@@ -24,7 +24,7 @@ Feature: Demo test
     Then message about <status> login is displayed
     Examples:
       | login        | password             | status        |
-      | tomsmith     | SuperSecretPassword! | successful    |
+      | tomsmith     | SuperSecretPassword! | unsuccessful    |
       | tomsmith     | wrongpass            | unsuccessful  |
       | unknown      | anypass              | successful    |
 
