@@ -1,7 +1,7 @@
 Feature: Demo test
 
   Background:
-  Given main page is open
+  Given main page is open "**This is a change to the feature file**"
 
   @ui
   @allure.label.epic:Buttons
