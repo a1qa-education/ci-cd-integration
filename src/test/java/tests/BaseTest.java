@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import utils.Browser;
 
 public abstract class BaseTest {
-    protected static final String URL = "https://the-internet.herokuapp.com/";
+    protected static final String URL = "https://this-website-is-fake-and-broken111.com/";
 
     @BeforeMethod
     public void setup() {

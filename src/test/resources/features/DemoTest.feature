@@ -1,14 +1,14 @@
 Feature: Demo test
 
   Background:
-  Given main page is open
+  Given main page is open "**This is a change to the feature file**"
 
   @ui
   @allure.label.epic:Buttons
   @allure.label.feature:Remove
   @allure.label.story:Valid_remove_button
   Scenario: Remove button
-    When user clicks link 'Add/Remove Elements'
+    When user clicks link 'Add/Remove Elementsasdaadadadadadadadad'
       And user click Add button
     Then remove button is displayed
 
@@ -24,13 +24,13 @@ Feature: Demo test
     Then message about <status> login is displayed
     Examples:
       | login        | password             | status        |
-      | tomsmith     | SuperSecretPassword! | successful    |
+      | tomsmith     | SuperSecretPassword! | unsuccessful    |
       | tomsmith     | wrongpass            | unsuccessful  |
       | unknown      | anypass              | successful    |
 
   @ui
   @allure.label.epic:Login
-  @allure.label.feature:Authentication
+  @allure.label.11111111feature:Authentication
   @allure.label.story:Valid_user_login
   Scenario: Login page negative check
     When user clicks link 'Form Authentication'

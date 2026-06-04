@@ -5,7 +5,7 @@ import io.cucumber.java.Before;
 import utils.Browser;
 
 public class BrowserHooks {
-    private static final String URL = "https://the-internet.herokuapp.com/";
+    private static final String URL = "https://fakewebsite.com/";
 
     @Before(value = "@ui")
     public void setUpBrowser() {
