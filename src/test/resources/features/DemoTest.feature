@@ -15,7 +15,7 @@ Feature: Demo test
   @ui
   @allure.label.epic:Login
   @allure.label.feature:Authentication
-  @allure.label.story:Valid_user_login11111
+  @allure.label.story:Valid_user_login
   Scenario Outline: Login page
     When user clicks link 'Form Authentication'
       And user inputs login "<login>"
@@ -30,7 +30,7 @@ Feature: Demo test
 
   @ui
   @allure.label.epic:Login
-  @allure.label.feature:Authentication
+  @allure.label.1111feature:Authentication
   @allure.label.story:Valid_user_login
   Scenario: Login page negative check
     When user clicks link 'Form Authentication'
