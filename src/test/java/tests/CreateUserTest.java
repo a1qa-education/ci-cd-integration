@@ -1,16 +1,16 @@
 package tests;
 
+import org.apache.http.HttpStatus;
+import org.testng.annotations.Test;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import io.restassured.http.ContentType;
-import models.User;
-import org.apache.http.HttpStatus;
-import org.testng.annotations.Test;
-import utils.RandomUtils;
-import io.restassured.mapper.ObjectMapperType;
-
 import static io.restassured.RestAssured.given;
+import io.restassured.http.ContentType;
+import io.restassured.mapper.ObjectMapperType;
+import models.User;
+import utils.RandomUtils;
 
 public class CreateUserTest {
     private static final String API_URL = "https://petstore.swagger.io";
@@ -24,8 +24,8 @@ public class CreateUserTest {
     public void createUser() {
         User user = new User();
         user.setUsername(RandomUtils.getRandomAlphabeticString());
-        user.setFirstName(RandomUtils.getRandomAlphabeticString());
-        user.setLastName(RandomUtils.getRandomAlphabeticString());
+        user.setFirstName("Santiago");
+        user.setLastName("Bole");
         user.setEmail(RandomUtils.getRandomAlphabeticString());
         user.setPassword(RandomUtils.getRandomAlphabeticString());
         user.setPhone(RandomUtils.getRandomAlphabeticString());
