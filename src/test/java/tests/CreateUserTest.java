@@ -24,8 +24,8 @@ public class CreateUserTest {
     public void createUser() {
         User user = new User();
         user.setUsername(RandomUtils.getRandomAlphabeticString());
-        user.setFirstName(RandomUtils.getRandomAlphabeticString());
-        user.setLastName(RandomUtils.getRandomAlphabeticString());
+        user.setFirstName("Archil1");
+        user.setLastName("Margvelashvili"); // task says that change this two parameters here from randomstring to your actual name which i did as you can see
         user.setEmail(RandomUtils.getRandomAlphabeticString());
         user.setPassword(RandomUtils.getRandomAlphabeticString());
         user.setPhone(RandomUtils.getRandomAlphabeticString());
@@ -40,6 +40,6 @@ public class CreateUserTest {
                 .post(CREATE_USER_ENDPOINT)
                 .then()
                 .assertThat()
-                .statusCode(HttpStatus.SC_OK);
+                .statusCode(HttpStatus.SC_BAD_REQUEST); // initially here was written sc.ok and now it is changed and after commit and push we can open jenkins again
     }
 }
